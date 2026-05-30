@@ -1,0 +1,260 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* BODY */
+
+body{
+    background-color:black;
+    color:white;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* SNOW ANIMATION BACKGROUND */
+
+body::before{
+    content:"";
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+        radial-gradient(#00ffff 1px, transparent 1px),
+        radial-gradient(#ff00ff 1px, transparent 1px),
+        radial-gradient(#00ff99 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+
+    background-size:
+        120px 120px,
+        180px 180px,
+        150px 150px,
+        200px 200px;
+
+    background-position:
+        0 0,
+        40px 60px,
+        130px 90px,
+        70px 120px;
+
+    opacity:0.7;
+
+    animation:neonDust 8s linear infinite;
+
+    z-index:-1;
+}
+
+/* SNOW MOVEMENT */
+
+@keyframes neonDust{
+
+    0%{
+        transform:translateY(-20px);
+    }
+
+    50%{
+        transform:translateY(20px);
+    }
+
+    100%{
+        transform:translateY(60px);
+    }
+
+}
+/* HERO SECTION */
+
+.hero{
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+/* MAIN TITLE */
+
+.hero h1{
+    font-size:70px;
+
+    color:#00ffff;
+
+    text-shadow:
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        /*0 0 21px #00ffff;*/
+}
+
+/* SUBTEXT */
+
+.hero p{
+    margin-top:15px;
+    font-size:22px;
+    color:#cccccc;
+}
+
+/* BUTTON */
+
+.btn{
+    margin-top:30px;
+
+    padding:15px 35px;
+
+    background:black;
+
+    color:#00ffff;
+
+    border:2px solid #00ffff;
+
+    border-radius:30px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:0.4s;
+}
+
+/* BUTTON HOVER */
+
+.btn:hover{
+
+    transform:scale(1.1);
+
+    background:#00ffff;
+
+    color:black;
+
+    box-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff,
+        0 0 80px #00ffff;
+}
+
+/* BUTTON CLICK */
+
+.btn:active{
+    transform:scale(0.95);
+}
+
+/* SECTIONS */
+
+section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+/* HEADINGS */
+
+h2{
+    margin-bottom:30px;
+
+    font-size:40px;
+
+    color:#00ffff;
+
+    text-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #00ffff;
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.skill{
+    padding:15px 25px;
+
+    background:#111;
+
+    border:1px solid #00ffff;
+
+    border-radius:15px;
+
+    transition:0.4s;
+}
+
+/* SKILL HOVER */
+
+.skill:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    color:#00ffff;
+
+    box-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #00ffff;
+}
+
+/* PROJECTS */
+
+.project{
+    width:70%;
+
+    margin:20px auto;
+
+    padding:25px;
+
+    background:#111;
+
+    border:1px solid #00ffff;
+
+    border-radius:20px;
+
+    transition:0.4s;
+}
+
+/* PROJECT HOVER */
+
+.project:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+        0 0 10px #00ffff,
+        0 0 25px #00ffff;
+}
+
+/* CONTACT */
+
+.contact{
+    font-size:20px;
+    line-height:35px;
+}
+/* CURSOR TRAIL */
+
+
+/* FOOTER */
+
+footer{
+    padding:20px;
+
+    text-align:center;
+
+    background:#050505;
+
+    border-top:1px solid #00ffff;
+
+    color:#00ffff;
+}
